@@ -5,13 +5,15 @@ golang_std_study
 
 标准库：
 
-1、集合数据结构，如array/slice/map等
+1、集合数据结构，array/slice/map、container包
 
-2、io
+2、字符处理：string vs rune、unicode包
 
-3、网络
+3、io：byte包、bufio包、io(ioutil)包
 
-4、golang chan机制
+4、网络
+
+5、golang chan机制
 
 ===============
 第三方库：
