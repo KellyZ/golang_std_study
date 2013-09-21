@@ -10,3 +10,12 @@
 ###第三方库：  
 1、web方面  
 2、数据库方面  
+
+
+###简要历史  
+贝尔实验室：Plan 9操作系统 --> Limbo --> go(2009/11)  
+
+
+###杂记  
+- main函数没有参数，没有返回值，命令行传入的参数在os.Args变量中。如果要支持命令行开关，可使用flag包。  
+- go资料整理：http://github.com/wonderfo/wonderfogo/wiki  
