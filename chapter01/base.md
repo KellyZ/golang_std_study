@@ -8,7 +8,7 @@
   
 ###类型
 - 基础类型  
-> 
+
 	**布尔类型**：bool  
 	**整型**：int8、byte、uint8、int16、uint16、int32、uint32、int64、uint64、int、uint、uintptr  
 	**浮点型**(*IEEE 754标准)：float32、float64(注意没有double)  
@@ -17,7 +17,7 @@
 	**字符类型**：rune  
 	**错误类型**：error  
 - 复合类型  
-> 
+
 	**指针**：pointer  
 	**数组**：array(值类型，在赋值和作为参数传递时都将产生一次复制动作)  
 	**切片**：slice(引用类型)  
@@ -29,12 +29,12 @@
 - 浮点数本身不精确，建议用以下方式比较：  
 ```
 import "math"
-
 func IsEqual(f1,f2,p float64) bool{
 	return math.Fdim(f1,f2) < p
 }
 ```
 
+  
   
 ###运算符
 和其他语言基本类似，没有特殊的  
