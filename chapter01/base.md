@@ -61,10 +61,14 @@ func IsEqual(f1,f2,p float64) bool{
 	`mySlice = append(mySlice,mySlice2...)  第二个参数加了三个点，表示可变参数，没有的话编译错误`  
 	`mySlice = append(mySlice,1,2,3)`  
 - 内容复制：以元素个数较小的进行复制  
-	`slice1 := []int{1,2,3,4,5}  
-	slice2 := []int{5,6,7}  
-	copy(slice2,slice1)//只会复制slice1前三个元素到slice2中  
-	copy(slice1,slice2)//只会复制slice2的三个元素到slice1的前三个位置`  
+
+```
+slice1 := []int{1,2,3,4,5}
+slice2 := []int{5,6,7}
+copy(slice2,slice1)//只会复制slice1前三个元素到slice2中
+copy(slice1,slice2)//只会复制slice2的三个元素到slice1的前三个位置
+```
+
 
 
 ###map
