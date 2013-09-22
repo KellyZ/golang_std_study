@@ -1,3 +1,7 @@
+go lang基础：  
+吸取很多语言的灵活特性，同时去除了很多传统诟病。  
+
+
 ###变量  
 - 变量初始化  
 	`var v1 int = 0  or  var v2 = 0`  
@@ -49,3 +53,29 @@ func IsEqual(f1,f2,p float64) bool{
 - 字符串遍历  
 	`for i:=0;i<len(str);i++{ch := str[i] (此处获取的是每个字节)}`  
 	`for i,ch := range str{ (此处的ch为rune) }`  
+
+  
+###数组切片  
+- 创建切片：1: array[:]  2: make([]int,10)  
+- 动态增减元素  
+	`mySlice = append(mySlice,mySlice2...)  第二个参数加了三个点，表示可变参数，没有的话编译错误`  
+	`mySlice = append(mySlice,1,2,3)`  
+- 内容复制：以元素个数较小的进行复制  
+	`slice1 := []int{1,2,3,4,5}  
+	slice2 := []int{5,6,7}  
+	copy(slice2,slice1)//只会复制slice1前三个元素到slice2中  
+	copy(slice1,slice2)//只会复制slice2的三个元素到slice1的前三个位置`  
+
+
+###map
+- 创建 `myMap := make(map[string] string,5)`  
+- 索引 `value,ok := myMap["123"]`  
+- 元素删除 `delete(myMap,"123")`  
+
+
+###流程控制  
+- 条件：if、else和else if;  
+- 选择：switch、case和select;  
+- 循环：for和range (没有while);  
+- 跳转：goto、break、continue和fallthrough;  
+
