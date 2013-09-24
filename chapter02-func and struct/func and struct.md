@@ -45,8 +45,15 @@ func (a *Integer) Less(b Integer) bool{
 
 ###并发
 - 并发模型：多进程、多线程、基于回调的非阻塞IO(Node.js)、协程(轻量级线程，语言层面支持)  
-- 并发通信：共享数据和消息  
+- 并发通信：共享数据和消息,go既支持锁也支持消息  
+- 在go支持多CPU版本之前可通过 `runtime.GOMAXPROCS(16)`控制使用多核，`runtime.Gosched()`主动出让时间片给其他goroutine  
 - 缓冲channel,单向channel, select  
+
+```
+var ch1 chan int = make(chan int,1024) //缓冲
+var ch2 chan<- int //单向只写
+var ch3 <-chan int //单向只读
+```
 - 并发通信超时  
 
 ```
@@ -63,3 +70,5 @@ select {
 		//timeout
 }
 ```
+- 关闭channel `close(ch)   x,ok := <-ch`  
+- 全局唯一性操作 `var once sync.Once;once.Do(funcname)`  
